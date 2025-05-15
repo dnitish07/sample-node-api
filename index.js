@@ -1,11 +1,12 @@
-// index.js
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
-app.get('/api/hello', (req, res) => {
-  res.json({ message: 'Hello from Node.js API!' });
+// Root route
+app.get('/', (req, res) => {
+  res.send('Hello from the deployed Node.js API!');
 });
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-// Triggering CI pipeline
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
