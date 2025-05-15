@@ -6,8 +6,9 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "jest --coverage",
-    "lint": "eslint . --ext .js"
+    "lint": "eslint . --ext .js",
+    "test": "npx jest"
+
   },
   "keywords": [],
   "author": "",
