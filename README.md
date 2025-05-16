@@ -11,8 +11,6 @@ This project demonstrates a full CI/CD pipeline and monitoring setup for a Node.
 - **Prometheus Node Exporter** (for host-level metrics)
 - **Node.js Express App** with `/metrics` exposed
 
----
-
 ## 📁 Project Structure
 
 ```markdown
@@ -32,7 +30,6 @@ sample-node-api/
 
 ````
 
----
 
 ## 📌 Prerequisites
 
@@ -40,7 +37,6 @@ sample-node-api/
 - [Node.js](https://nodejs.org/) (for local dev only)
 - GitHub account (for CI/CD)
 
----
 
 ## ⚙️ Setup Instructions
 
@@ -50,8 +46,6 @@ sample-node-api/
 git clone https://github.com/your-username/sample-node-api.git
 cd sample-node-api
 ````
-
----
 
 ### 2. Build and Run Locally with Docker
 
@@ -64,8 +58,6 @@ This will start:
 * `app` → Node.js Express API (exposes `/metrics`)
 * `prometheus` → collects metrics from app
 * *(Optional)* `grafana` → view metrics dashboards
-
----
 
 ### 3. Prometheus Setup
 
