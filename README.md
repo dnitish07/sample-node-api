@@ -1,6 +1,6 @@
 DevOps assignment based on a **Node.js REST API** with **Prometheus monitoring**, **GitHub Actions CI/CD**, and **Docker-based deployment**.
 
-# 🚀 DevOps Assignment: CI/CD Pipeline and Monitoring for Node.js REST API
+# DevOps Assignment: CI/CD Pipeline and Monitoring for Node.js REST API
 
 This project demonstrates a full CI/CD pipeline and monitoring setup for a Node.js REST API using:
 
@@ -10,7 +10,7 @@ This project demonstrates a full CI/CD pipeline and monitoring setup for a Node.
 - **Prometheus Node Exporter** (for host-level metrics)
 - **Node.js Express App** with `/metrics` exposed
 
-## 📁 Project Structure
+## Project Structure
 
 ```markdown
 
@@ -30,14 +30,14 @@ sample-node-api/
 ````
 
 
-## 📌 Prerequisites
+## Prerequisites
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - [Node.js](https://nodejs.org/) (for local dev only)
 - GitHub account (for CI/CD)
 
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 ### 1. Clone the Repository
 
@@ -59,7 +59,7 @@ This will start:
 
 ### 3. Prometheus Setup
 
-#### 📁 `prometheus/prometheus.yml`
+#### `prometheus/prometheus.yml`
 
 ```yaml
 global:
@@ -73,7 +73,7 @@ scrape_configs:
 
 ### 4. GitHub Actions CI/CD Setup
 
-#### 📁 `.github/workflows/ci-cd.yml`
+#### `.github/workflows/ci-cd.yml`
 
 ```yaml
 name: CI/CD Pipeline
@@ -109,30 +109,13 @@ jobs:
         run: echo "Deploy logic if using cloud VM or Render"
 ```
 
-## 🧪 How to Test It
+## How to Test It
 
 * Visit `http://localhost:3000/` → API running
 * Visit `http://localhost:4001/metrics` → metrics exposed
 * Visit `http://localhost:9090/` → Prometheus UI
 
-## 📊 (Optional) Grafana Setup
-
-Add this to `docker-compose.yml`:
-
-```yaml
-grafana:
-  image: grafana/grafana
-  ports:
-    - "3001:3000"
-  volumes:
-    - grafana-data:/var/lib/grafana
-```
-
-Visit `http://localhost:3001/` → Login (`admin`/`admin`)
-
----
-
-## 🔁 CI/CD Pipeline Flow
+## CI/CD Pipeline Flow
 
 ```text
 Push Code → GitHub
@@ -143,7 +126,7 @@ GitHub Actions:
   - Push to Docker Hub
 ```
 
-## 📈 Monitoring Overview
+## Monitoring Overview
 
 * Prometheus scrapes `/metrics` from the app every 15s
 * Metrics collected:
@@ -151,42 +134,13 @@ GitHub Actions:
   * HTTP request counts
   * Duration
   * Memory, CPU, etc.
-* Grafana (if enabled) shows real-time dashboards
-
-## 📦 Scaling the Application
-
-* Use Docker Swarm / Kubernetes for horizontal scaling
-* Use a Load Balancer (e.g., NGINX or Traefik)
-* Scale services:
 
 ```bash
 docker-compose up --scale app=3
 ```
 
-## 💥 Disaster Recovery Steps
+## Disaster Recovery Steps
 
 * **Prometheus**: Backup data volume or use remote write
 * **App**: Rebuild from Docker image or GitHub repo
 * **CI/CD**: Use protected branches and rollback tags
-
-## 🧠 Helpful Commands
-
-```bash
-# Start services
-docker-compose up -d
-
-# Stop services
-docker-compose down
-
-# View logs
-docker-compose logs -f
-
-# Rebuild everything
-docker-compose up --build --force-recreate
-```
-
-## 🙌 Author
-
-**Nitish D.**
-Full-Stack Software Engineer & DevOps Enthusiast
-[GitHub](https://github.com/dnitish07)
