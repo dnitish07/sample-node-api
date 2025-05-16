@@ -56,7 +56,6 @@ This will start:
 
 * `app` → Node.js Express API (exposes `/metrics`)
 * `prometheus` → collects metrics from app
-* *(Optional)* `grafana` → view metrics dashboards
 
 ### 3. Prometheus Setup
 
@@ -71,8 +70,6 @@ scrape_configs:
     static_configs:
       - targets: ['app:3000']
 ```
-
----
 
 ### 4. GitHub Actions CI/CD Setup
 
@@ -112,15 +109,11 @@ jobs:
         run: echo "Deploy logic if using cloud VM or Render"
 ```
 
----
-
 ## 🧪 How to Test It
 
 * Visit `http://localhost:3000/` → API running
 * Visit `http://localhost:4001/metrics` → metrics exposed
 * Visit `http://localhost:9090/` → Prometheus UI
-
----
 
 ## 📊 (Optional) Grafana Setup
 
@@ -142,16 +135,13 @@ Visit `http://localhost:3001/` → Login (`admin`/`admin`)
 ## 🔁 CI/CD Pipeline Flow
 
 ```text
-Developer Push Code → GitHub
+Push Code → GitHub
          ↓
 GitHub Actions:
   - Lint/Test
   - Build Docker Image
   - Push to Docker Hub
-  - Optional: Deploy to server
 ```
-
----
 
 ## 📈 Monitoring Overview
 
@@ -163,8 +153,6 @@ GitHub Actions:
   * Memory, CPU, etc.
 * Grafana (if enabled) shows real-time dashboards
 
----
-
 ## 📦 Scaling the Application
 
 * Use Docker Swarm / Kubernetes for horizontal scaling
@@ -175,17 +163,11 @@ GitHub Actions:
 docker-compose up --scale app=3
 ```
 
----
-
 ## 💥 Disaster Recovery Steps
 
 * **Prometheus**: Backup data volume or use remote write
 * **App**: Rebuild from Docker image or GitHub repo
 * **CI/CD**: Use protected branches and rollback tags
-* **Grafana**: Export dashboards and backup config
-* **Versioning**: Use semantic version tags (`v1.0.0`, `v1.1.0`)
-
----
 
 ## 🧠 Helpful Commands
 
@@ -203,23 +185,8 @@ docker-compose logs -f
 docker-compose up --build --force-recreate
 ```
 
----
-
 ## 🙌 Author
 
 **Nitish D.**
 Full-Stack Software Engineer & DevOps Enthusiast
 [GitHub](https://github.com/dnitish07)
-
----
-
-## ✅ License
-
-This project is licensed under the MIT License.
-
-```
-
----
-
-Let me know if you want this saved as a `README.md` file or converted to PDF.
-```
