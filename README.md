@@ -1,4 +1,4 @@
-Here is a complete, professional-grade `README.md` for your DevOps assignment based on a **Node.js REST API** with **Prometheus monitoring**, **GitHub Actions CI/CD**, and **Docker-based deployment** — everything from scratch.
+DevOps assignment based on a **Node.js REST API** with **Prometheus monitoring**, **GitHub Actions CI/CD**, and **Docker-based deployment** — everything from scratch.
 
 ---
 
