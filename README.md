@@ -41,7 +41,7 @@ sample-node-api/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/sample-node-api.git
+git clone https://github.com/dnitish07/sample-node-api.git
 cd sample-node-api
 ````
 
