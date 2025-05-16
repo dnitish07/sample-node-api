@@ -20,7 +20,6 @@ sample-node-api/
 │       └── ci-cd.yml          # GitHub Actions workflow
 ├── prometheus/
 │   ├── prometheus.yml         # Prometheus config
-│   └── Dockerfile             # Optional if customizing
 ├── index.js                   # Node.js Express API
 ├── Dockerfile                 # App container definition
 ├── docker-compose.yml         # Orchestration of services
