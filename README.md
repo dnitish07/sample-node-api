@@ -18,7 +18,7 @@ This project demonstrates a full CI/CD pipeline and monitoring setup for a Node.
 
 ## 📁 Project Structure
 
-```
+```markdown
 
 sample-node-api/
 ├── .github/
