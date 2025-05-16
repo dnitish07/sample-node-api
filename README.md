@@ -118,7 +118,7 @@ jobs:
 ## 🧪 How to Test It
 
 * Visit `http://localhost:3000/` → API running
-* Visit `http://localhost:3000/metrics` → metrics exposed
+* Visit `http://localhost:4001/metrics` → metrics exposed
 * Visit `http://localhost:9090/` → Prometheus UI
 
 ---
