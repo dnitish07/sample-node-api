@@ -7,7 +7,6 @@ This project demonstrates a full CI/CD pipeline and monitoring setup for a Node.
 - **GitHub Actions** (for CI/CD)
 - **Docker Compose** (for container orchestration)
 - **Prometheus** (for metrics monitoring)
-- **(Optional)** Grafana (for dashboard visualization)
 - **Prometheus Node Exporter** (for host-level metrics)
 - **Node.js Express App** with `/metrics` exposed
 
