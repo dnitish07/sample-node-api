@@ -2,7 +2,7 @@ DevOps assignment based on a **Node.js REST API** with **Prometheus monitoring**
 
 ---
 
-```markdown
+```
 # 🚀 DevOps Assignment: CI/CD Pipeline and Monitoring for Node.js REST API
 
 This project demonstrates a full CI/CD pipeline and monitoring setup for a Node.js REST API using:
